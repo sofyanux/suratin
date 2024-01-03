@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users');
             $table->text('activity');
-            $table->unsignedBigInteger('surat_id')->nullable();
+            $table->unsignedBigInteger('letter_id')->nullable();
             $table->timestamps();
         });
     }

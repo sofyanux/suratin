@@ -9,7 +9,7 @@ class LetterLog extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'activity', 'surat_id'];
+    protected $fillable = ['user_id', 'activity', 'letter_id'];
 
     public function user()
     {
@@ -18,6 +18,6 @@ class LetterLog extends Model
 
     public function letter()
     {
-        return $this->belongsTo(Letter::class, 'surat_id');
+        return $this->belongsTo(Letter::class, 'letter_id');
     }
 }

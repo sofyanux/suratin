@@ -9,10 +9,10 @@ class Archive extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['surat_id', 'location', 'status'];
+    protected $fillable = ['letter_id', 'location', 'status'];
 
     public function letter()
     {
-        return $this->belongsTo(Letter::class, 'surat_id');
+        return $this->belongsTo(Letter::class, 'letter_id');
     }
 }
