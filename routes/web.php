@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.app');
+});
+
+Route::group(['middleware' => 'checkRole:admin'], function () {
+    // Rute-rute yang hanya dapat diakses oleh pengguna dengan peran 'admin'
+    // ...
 });
